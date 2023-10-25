@@ -1,0 +1,17 @@
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border {
+    border: 2px solid black;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.red {
+    background-color: red;
+}
