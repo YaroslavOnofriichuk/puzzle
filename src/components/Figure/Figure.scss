@@ -1,0 +1,14 @@
+.figure {
+    display: flex;
+    cursor: grab;
+    width: 100%;
+    background: transparent;
+    -webkit-background: transparent;
+    -ms-background: transparent;
+    -o-background: transparent;
+}
+
+.figure-column {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,19 +1,15 @@
 import "./Cell.scss";
-import { MATRIX_SIZE } from "../../service";
 import type { MatrixCell } from "../../types";
 
-export const Cell = ({color, border, id}: MatrixCell): JSX.Element => {
-    const onDrop = (e) => {
-        console.log("onDrop", e)
-    }
+interface CellProps extends MatrixCell {
+    cellWidth: number,
+}
+
+export const Cell = ({color, active, id, cellWidth}: CellProps): JSX.Element => {
     return <div 
-            className={`cell ${color} ${border ? "border" : ""}`}
-            style={{ 
-                width: `calc(100% / ${MATRIX_SIZE})`,
-                height: `calc(100% / ${MATRIX_SIZE})`,
-            }}
+            className={`cell ${color} ${active ? "active" : ""}`}
+            style={{ width: cellWidth, height: cellWidth }}
             id={id}
-            onDrop={onDrop}
         >
     </div>
 }

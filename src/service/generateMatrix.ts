@@ -10,7 +10,7 @@ export const generateMatrix = (): Matrix => {
             matrix[i][k] = {
                 id: `${i}${k}`,
                 color: "transparent",
-                border: false,
+                active: false,
             };
             
         }
