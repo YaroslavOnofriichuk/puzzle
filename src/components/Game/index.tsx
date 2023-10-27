@@ -2,7 +2,12 @@ import { useState, useEffect } from "react";
 import "./Game.scss";
 import { Cell } from "../Cell";
 import { Figure } from "../Figure";
-import { generateMatrix, getRandomFigure, getTargetPosition } from "../../service";
+import { 
+    generateMatrix, 
+    getRandomFigure, 
+    getTargetPosition,
+    canSetFigure,
+} from "../../service";
 import type { Matrix, Figure as FigureType } from "../../types";
 import { MATRIX_SIZE } from "../../service";
 
@@ -21,19 +26,18 @@ export const Game = ({ containerWidth }: GameProps): JSX.Element => {
 
     const handleDragEnd = (x: number, y: number, figure: FigureType) => {
         const position = getTargetPosition(x, y, containerWidth);
-        console.log("position", position)
-        console.log("figures", figures)
+        canSetFigure(matrix, figure, position);
         const newMatrix = [...matrix];
         newMatrix[position[0]][position[1]].active = true;
         newMatrix[position[0]][position[1]].color = figure.color || "transparent";
-        const newFigures = figures.filter(fig => fig.id !== figure.id);
-        console.log("newFigures", newFigures)
-        setMatrix(newMatrix);
-        if (newFigures.length === 0) {
-            setFigures([getRandomFigure(), getRandomFigure()]);
-        } else {
-            setFigures(newFigures);
-        }
+        // const newFigures = figures.filter(fig => fig.id !== figure.id);
+        // setMatrix(newMatrix);
+        // if (newFigures.length === 0) {
+        //     setFigures([getRandomFigure(), getRandomFigure()]);
+        // } else {
+        //     setFigures(newFigures);
+        // }
+        
     };
 
     return  <>

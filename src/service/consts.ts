@@ -10,7 +10,7 @@ export const COLORS: string[] = [
 ];
 
 export const FIGURES: Figure[] = [
-    { map: [[0], [0], [0, 1, 2], []] },
-    { map: [[0], [0], [0]] },
-    { map: [[0, 1, 2], [], []] },
+    { id: 1, map: [[0], [0], [0, 1, 2], []] },
+    { id: 2, map: [[0], [0], [0]] },
+    { id: 3, map: [[0, 1, 2], [], []] },
 ];

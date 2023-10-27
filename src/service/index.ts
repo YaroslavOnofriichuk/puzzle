@@ -5,3 +5,4 @@ export { random } from "./generateRandomNumber";
 export { getRandomColor } from "./getRandomColor";
 export { getRandomFigure } from "./getRandomFigure";
 export { getTargetPosition} from "./getTargetPosition";
+export { canSetFigure } from "./canSetFigure";

@@ -2,33 +2,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 }
 
 .active {
-    border: 2px solid black;
+    -webkit-box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37); 
+    box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37);
     background-color: cadetblue;
+    border-radius: 3px;
 }
 
 .transparent {
     background-color: transparent;
+    -webkit-box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37); 
+    box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37);
+    border-radius: 3px;
 }
 
 .red {
-    border: 2px solid black;
+    -webkit-box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37); 
+    box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37);
     background-color: red;
+    border-radius: 3px;
 }
 
 .blue {
-    border: 2px solid black;
+    -webkit-box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37); 
+    box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37);
     background-color: aqua;
+    border-radius: 3px;
 }
 
 .green {
-    border: 2px solid black;
+    -webkit-box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37); 
+    box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37);
     background-color: green;
+    border-radius: 3px;
 }
 
 .yellow {
-    border: 2px solid black;
+    -webkit-box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37); 
+    box-shadow: inset 0px 0px 10px 18px rgba(0,0,0,0.37);
     background-color: yellow;
+    border-radius: 3px;
 }
