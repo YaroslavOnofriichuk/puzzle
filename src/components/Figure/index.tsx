@@ -15,10 +15,15 @@ export const Figure = ({ figure, cellWidth, onDragEnd }: FigureProps): JSX.Eleme
         onDragEnd(event.pageX, event.pageY, figure);
     };
 
+    const handleDragStart = (event: DragEvent<HTMLDivElement>) => {
+        console.log("handleDragStart", event)
+    };
+
     return  <div 
                 className="figure" 
                 draggable={true}
                 onDragEnd={handleDragEnd}
+                onDragStart={handleDragStart}
             >
         {generateMap(figure).map((col, index) => (
             <div key={index} className="figure-column">

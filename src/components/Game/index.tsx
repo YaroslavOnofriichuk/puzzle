@@ -26,12 +26,12 @@ export const Game = ({ containerWidth }: GameProps): JSX.Element => {
 
     const handleDragEnd = (x: number, y: number, figure: FigureType) => {
         const position = getTargetPosition(x, y, containerWidth);
-        canSetFigure(matrix, figure, position);
+        // canSetFigure(matrix, figure, position);
         const newMatrix = [...matrix];
         newMatrix[position[0]][position[1]].active = true;
         newMatrix[position[0]][position[1]].color = figure.color || "transparent";
         // const newFigures = figures.filter(fig => fig.id !== figure.id);
-        // setMatrix(newMatrix);
+        setMatrix(newMatrix);
         // if (newFigures.length === 0) {
         //     setFigures([getRandomFigure(), getRandomFigure()]);
         // } else {
